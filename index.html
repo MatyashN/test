@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>my test</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="modal fade" id="modal-add">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">
+              <i class="glyphicon glyphicon-remove"></i>
+            </button>
+            <h4 class="modal-title">Add customers</h4>
+          </div>
+          <div class="modal-body">
+            <form name="user" action="/form" class="navbar-form" method="GET">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Name" name="Name">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="text" class="form-control" placeholder="E-mail" name="Email">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                  <input type="text" class="form-control" placeholder="Telephone" name="Telephone">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input type="text" class="form-control" placeholder="Address" name="Address">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input type="text" class="form-control" placeholder="Street" name="Street">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input type="text" class="form-control" placeholder="City" name="City">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input type="text" class="form-control" placeholder="State" name="State">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></span>
+                  <input type="text" class="form-control" placeholder="Zip" name="Zip">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary addBut" type="button">Add</button>
+            <button class="btn btn-default" type="button" data-dismiss="modal">cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-edit">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">
+              <i class="glyphicon glyphicon-remove"></i>
+            </button>
+            <h4 class="modal-title">Edit customer</h4>
+          </div>
+          <div class="modal-body">
+            <form name="user" action="/form" class="navbar-form" method="GET">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Name" name="Name">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="text" class="form-control" placeholder="E-mail" name="Email">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                  <input type="text" class="form-control" placeholder="Telephone" name="Telephone">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input type="text" class="form-control" placeholder="Address" name="Address">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input type="text" class="form-control" placeholder="Street" name="Street">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input type="text" class="form-control" placeholder="City" name="City">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input type="text" class="form-control" placeholder="State" name="State">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></span>
+                  <input type="text" class="form-control" placeholder="Zip" name="Zip">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary edit" type="button" data-dismiss="modal">Edit</button>
+            <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid main-wrap">
+      <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 sidebar">
+         <ul class="list-customers">
+           <!-- <li><i class="glyphicon glyphicon-user"></i> Nikolay</li>
+           <li><i class="glyphicon glyphicon-user"></i> Nikolay</li>
+           <li><i class="glyphicon glyphicon-user"></i> Nikolay</li> -->
+         </ul>
+         <button type="button" id="add-customers" data-toggle="modal" data-target="#modal-add">Add customers</button>
+      </div>
+      <div class="col-xs-8 col-sm-10 col-md-10 col-lg-10 col-xs-offset-4 col-sm-offset-2 main">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 card tmp">
+          <div id="buttonCard">
+            <i class="glyphicon glyphicon-pencil editBut" data-toggle="modal" data-target="#modal-edit"></i>
+            <i class="glyphicon glyphicon-minus turnBut"></i>
+            <i class="glyphicon glyphicon-remove removeBut"></i>
+          </div>
+          <div class="thumbnail">
+            <ul>
+             <li class="Name"></li>
+             <li class="Email"></li>
+             <li class="Telephone"></li>
+             <li class="Address"></li>
+             <li class="Street"></li>
+             <li class="City"></li>
+             <li class="State"></li>
+             <li class="Zip"></li>
+           </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
